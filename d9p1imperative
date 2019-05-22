@@ -1,0 +1,35 @@
+with open('d9p1input.dat', 'r') as myfile:
+  characters = myfile.read()
+
+intrash = False
+skip = False
+
+cleaned = []
+
+for i in characters:
+	if skip == True:
+		skip = False
+	elif i == "!":
+		skip = True
+	elif i == ">" and intrash == True:
+		intrash = False
+	elif intrash == True:
+		pass
+	elif i == "<" and intrash == False:
+		intrash = True
+	else:
+		cleaned.append(i)
+
+
+level = 0
+count = 0
+
+for i in cleaned:
+	if  i == "{":
+		level += 1
+	elif i == "}":
+		count += level
+		level -= 1
+
+print count
+	

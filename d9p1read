@@ -1,0 +1,6 @@
+# # F = open(“d9p1input”,”r”) 
+# # Print f
+
+# file = open(“d9p1input”, “r”) 
+# print file.read() 
+print "Hello"

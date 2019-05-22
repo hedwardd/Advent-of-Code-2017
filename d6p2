@@ -1,0 +1,49 @@
+memory = "14	0	15	12	11	11	3	5	1	6	8	4	9	1	8	4"
+
+## clean up input
+memory = memory.split('	')
+memory = [int(i) for i in memory]
+
+## initiate history array and counter
+history = []
+count = 0
+run = 1
+
+
+## begin while loop when history array doesn't contain current state
+while True:
+
+
+## record state
+	history.append(list(memory))
+
+## find highest number and value
+	max_value = max(memory)
+	max_index = memory.index(max_value)
+
+
+## set the place of high value to 0
+	memory[max_index] = 0
+
+
+## step through array until var is 0
+	for i in range(max_value):
+		memory[(max_index+1 + i)  % len(memory)] += 1
+
+## count loops so far
+	count += 1
+
+## run 1 check
+	if (run == 1):
+		if (memory in history):
+			count2 = count
+			history = []
+			run = 2
+
+## run 2 check
+	elif (run == 2):
+		if (memory in history):
+			break
+
+## print loop count
+print count - count2

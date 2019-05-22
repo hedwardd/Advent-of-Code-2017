@@ -1,0 +1,62 @@
+input = "{{{}}}"
+
+# go through the list of characters
+# from functools import reduce
+# product = reduce((lambda x, y: x * y), input)
+
+points = 0
+
+	# recursive function that calls itself whenever another { comes up and ends when another } comes up
+	# also calls another function (maybe itself) when a < comes up and ends when a > comes up
+	# in the garbage function, ignores anything that comes after a !
+
+
+# def group(RestOfInput):
+# 	if RestOfInput[0] == "{":
+# 		return group(RestOfInput) + 1
+# 	elif RestOfInput[0] == "<":
+# 		return trash(Rest0fInput)
+# 	elif RestOfInput[0] == "}":
+# 		return 1
+
+
+# def calculate:
+# 	return reduce((lambda x, y: group(char))
+
+
+# print calculate
+
+# >>> reduce(lambda x, y: x+y, [1, 2, 3, 4]) # the left argument, x, is the accumulated value and the right argument, y, is the update value from the iterable.
+# 10 # ((1+2)+3)+4)
+# >>> reduce(lambda x, y: x-y, [125, 25, 5, 1])
+# 94 # ((125-25)-5)-1)
+# >>> reduce(lambda x, y: x*y, [2, 2, 2, 2])
+# 16 # ((2*2)*2)*2)
+# >>> reduce(lambda x, y: x/y, [125, 25, 5, 1])
+# 1 # ((125/25)/5)/1)
+# >>> reduce(lambda x, y: x*y, [1])
+# 1
+
+
+	## types of inputs
+	# { : start a new group
+	# } : end a group (sum?)
+	# < : start a new garbage group
+	# > : end a garbage group
+	# ! : within a garbage group, ignore next character
+
+
+
+
+# imperative
+
+# input = "{{{}}}"
+
+def group(ThisInput):
+	for i in range(len(input):
+		if (ThisInput[i] == "{"):
+			return 
+
+
+
+

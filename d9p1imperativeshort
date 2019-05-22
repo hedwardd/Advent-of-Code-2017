@@ -1,0 +1,32 @@
+characters = "{<a>,<a>,<a>,<a>}"
+
+# imperative
+
+intrash = False
+skip = False
+
+# # for i in input:
+# # 	if i == "<":
+# # 		
+# for idx, val in enumerate(input):
+#     print(idx, val)
+
+cleaned = []
+
+for i in characters:
+	if skip == True:
+		skip = False
+		print "1"
+	elif i == ">" and intrash == True:
+		intrash = False
+		print "2"
+	elif intrash == True:
+		print "3"
+	elif i == "<" and intrash == False:
+		intrash = True
+		print "4"
+	else:
+		cleaned.append(i)
+		print "5"
+
+print cleaned

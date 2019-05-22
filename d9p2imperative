@@ -1,0 +1,23 @@
+with open('d9p1input.dat', 'r') as myfile:
+  characters = myfile.read()
+
+intrash = False
+skip = False
+count = 0
+
+for i in characters:
+	if skip == True:
+		skip = False
+	elif i == "!":
+		skip = True
+	elif i == ">" and intrash == True:
+		intrash = False
+	elif intrash == True:
+		count += 1
+	elif i == "<" and intrash == False:
+		intrash = True
+		
+
+
+print count
+	

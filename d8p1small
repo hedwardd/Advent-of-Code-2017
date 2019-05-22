@@ -1,0 +1,32 @@
+lines = """b inc 5 if a > 1
+a inc 1 if b < 5
+c dec -10 if a >= 1
+c inc -20 if c == 10"""
+
+
+## clean up input
+lines = lines.splitlines()
+i = 0
+
+dict = {}
+
+def inc(key, num):
+	dict[key] += num
+
+
+
+while i < len(lines):
+	thisRow = lines[i]
+	thisRow = thisRow.split(' ')
+
+
+	## check condition and/or set to 0
+
+	## increment or decrement
+
+
+	if (dict.get(thisRow[4], 0) ):
+	print thisRow[4]
+	print dict.get(thisRow[4])
+
+	i+=1

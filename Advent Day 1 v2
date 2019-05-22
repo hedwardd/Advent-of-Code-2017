@@ -1,0 +1,20 @@
+sum = 0
+input = "1221"
+array = list(input)
+length = len(input)
+i = 0
+
+
+while i < len(input):
+	if i < len(input)-1:
+		if array[i] == array[i+1]:
+			sum = sum + int(array[i])
+	else:
+		if array[i] == array[0]:
+			sum = sum + int(array[i])
+	i = i+1
+
+
+
+
+print(sum)

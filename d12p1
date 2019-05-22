@@ -1,0 +1,49 @@
+with open('d12input', 'r') as myfile:
+  input = myfile.read()
+
+input = input.splitlines()
+
+
+finished = False
+
+## while not finished
+##while finished = False:
+
+
+## for every row (starting at 0)
+for i in range(0,len(input)):
+		input[i] = input[i].split(' <-> ')
+		input[i][1] = input[i][1].split(', ')
+
+
+
+connected = ['0']
+checked = []
+
+while finished == False:
+
+	## start a list of numbers connected to 0 (and therefore other numbers in the list)
+	for i in range(0,len(input)):
+		print input[i]
+
+		if not(input[i][0] in checked) and input[i][0] in connected: 
+				connected = connected + input[i][1]
+				checked.append(input[i][0])
+				print "this happened"
+
+	finished = True
+	for i in range(0,len(connected)):
+		if not(connected[i] in checked):
+			finished = False
+			print connected[0], " HASN'T BEEN CHECKED"
+
+	print "connected: ", connected
+	print "checked: ", checked
+
+print len(set(connected))
+
+# print connected
+
+
+
+# # print input
